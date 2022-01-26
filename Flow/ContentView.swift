@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
+        ZStack {
             LinearGradient(
                 colors: [
                     Color(red: 91/255.0, green: 195/255.0, blue: 190/255.0),
@@ -18,6 +19,27 @@ struct ContentView: View {
                 endPoint: .bottomLeading
             )
             .edgesIgnoringSafeArea(.all)
+            
+            HStack(alignment: .top, spacing: 16.0) {
+                VStack(spacing: 4.0) {
+                    Text("15")
+                        .font(.largeTitle)
+                    Text("Minutes")
+                        .font(.caption2)
+                }
+                VStack {
+                    Text(":")
+                        .font(.largeTitle)
+                }
+                VStack(spacing: 4.0) {
+                    Text("37")
+                        .font(.largeTitle)
+                    Text("Seconds")
+                        .font(.caption2)
+                }
+            }
+            .foregroundColor(.white)
+        }
     }
 }
 
