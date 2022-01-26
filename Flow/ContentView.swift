@@ -20,25 +20,38 @@ struct ContentView: View {
             )
             .edgesIgnoringSafeArea(.all)
             
-            HStack(alignment: .top, spacing: 16.0) {
-                VStack(spacing: 4.0) {
-                    Text("15")
-                        .font(.largeTitle)
-                    Text("Minutes")
-                        .font(.caption2)
+            ZStack {
+                ZStack {
+                    Circle()
+                        .stroke(Color(.sRGB, white: 1.0, opacity: 0.05), lineWidth: 6)
+                    Circle()
+                        .trim(from: 0.0, to: CGFloat(0.8))
+                        .stroke(Color(.sRGB, red: 75/255.0, green: 26/255.0, blue: 111/255.0, opacity: 0.7), lineWidth: 6)
+                        .saturation(<#T##amount: Double##Double#>)
                 }
-                VStack {
-                    Text(":")
-                        .font(.largeTitle)
+                .rotationEffect(Angle(degrees: -90))
+                
+                HStack(alignment: .top, spacing: 16.0) {
+                    VStack(spacing: 4.0) {
+                        Text("15")
+                            .font(.largeTitle)
+                        Text("Minutes")
+                            .font(.caption2)
+                    }
+                    VStack {
+                        Text(":")
+                            .font(.largeTitle)
+                    }
+                    VStack(spacing: 4.0) {
+                        Text("37")
+                            .font(.largeTitle)
+                        Text("Seconds")
+                            .font(.caption2)
+                    }
                 }
-                VStack(spacing: 4.0) {
-                    Text("37")
-                        .font(.largeTitle)
-                    Text("Seconds")
-                        .font(.caption2)
-                }
+                .foregroundColor(.white)
             }
-            .foregroundColor(.white)
+            .padding()
         }
     }
 }
