@@ -20,16 +20,8 @@ struct ContentView: View {
             )
             .edgesIgnoringSafeArea(.all)
             
-            ZStack {
-                ZStack {
-                    Circle()
-                        .stroke(Color(.sRGB, white: 1.0, opacity: 0.05), lineWidth: 6)
-                    Circle()
-                        .trim(from: 0.0, to: CGFloat(0.8))
-                        .stroke(Color(.sRGB, red: 75/255.0, green: 26/255.0, blue: 111/255.0, opacity: 0.7), lineWidth: 6)
-                        .saturation(<#T##amount: Double##Double#>)
-                }
-                .rotationEffect(Angle(degrees: -90))
+            VStack {
+                Spacer()
                 
                 HStack(alignment: .top, spacing: 16.0) {
                     VStack(spacing: 4.0) {
@@ -50,8 +42,32 @@ struct ContentView: View {
                     }
                 }
                 .foregroundColor(.white)
+                .frame(width: 275, height: 275)
+                .overlay(
+                    ZStack {
+                        Circle()
+                            .stroke(Color(.sRGB, white: 1.0, opacity: 0.05), lineWidth: 6)
+                        Circle()
+                            .trim(from: 0.0, to: CGFloat(0.8))
+                            .stroke(Color(.sRGB, red: 75/255.0, green: 26/255.0, blue: 111/255.0, opacity: 0.7), lineWidth: 6)
+                        
+                        
+                    }
+                    .rotationEffect(Angle(degrees: -90))
+                )
+                
+                Spacer()
+                
+                HStack {
+                    Button(action: {
+                        print("Play pressed")
+                    }, label: {
+                        Image(systemName: "play")
+                            .foregroundColor(.white)
+                    })
+                    .padding()
+                }
             }
-            .padding()
         }
     }
 }
