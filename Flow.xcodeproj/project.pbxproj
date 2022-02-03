@@ -15,6 +15,8 @@
 		95538E8D27A1E98600378829 /* FlowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95538E8C27A1E98600378829 /* FlowTests.swift */; };
 		95538E9727A1E98700378829 /* FlowUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95538E9627A1E98700378829 /* FlowUITests.swift */; };
 		95538E9927A1E98700378829 /* FlowUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95538E9827A1E98700378829 /* FlowUITestsLaunchTests.swift */; };
+		95B5C22927AC7A84003FB436 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B5C22827AC7A84003FB436 /* R.generated.swift */; };
+		95B5C22C27AC7ADD003FB436 /* Rswift in Frameworks */ = {isa = PBXBuildFile; productRef = 95B5C22B27AC7ADD003FB436 /* Rswift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +48,7 @@
 		95538E9227A1E98700378829 /* FlowUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlowUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		95538E9627A1E98700378829 /* FlowUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowUITests.swift; sourceTree = "<group>"; };
 		95538E9827A1E98700378829 /* FlowUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		95B5C22827AC7A84003FB436 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95B5C22C27AC7ADD003FB436 /* Rswift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +80,7 @@
 		9516998227A2CB1E0034DC9F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				95B5C22827AC7A84003FB436 /* R.generated.swift */,
 				95538E7F27A1E98600378829 /* Assets.xcassets */,
 				9516998327A2CB3E0034DC9F /* Colors.xcassets */,
 			);
@@ -145,6 +150,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 95538E9C27A1E98700378829 /* Build configuration list for PBXNativeTarget "Flow" */;
 			buildPhases = (
+				95B5C22727AC7777003FB436 /* R.Swift */,
 				95538E7427A1E98600378829 /* Sources */,
 				95538E7527A1E98600378829 /* Frameworks */,
 				95538E7627A1E98600378829 /* Resources */,
@@ -154,6 +160,9 @@
 			dependencies = (
 			);
 			name = Flow;
+			packageProductDependencies = (
+				95B5C22B27AC7ADD003FB436 /* Rswift */,
+			);
 			productName = Flow;
 			productReference = 95538E7827A1E98600378829 /* Flow.app */;
 			productType = "com.apple.product-type.application";
@@ -226,6 +235,9 @@
 				Base,
 			);
 			mainGroup = 95538E6F27A1E98600378829;
+			packageReferences = (
+				95B5C22A27AC7ADD003FB436 /* XCRemoteSwiftPackageReference "R.swift" */,
+			);
 			productRefGroup = 95538E7927A1E98600378829 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -264,6 +276,29 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		95B5C22727AC7777003FB436 /* R.Swift */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = R.Swift;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(SRCROOT)/R.generated.swift",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"$SRCROOT/rswift\" generate \"$SRCROOT/R.generated.swift\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		95538E7427A1E98600378829 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -271,6 +306,7 @@
 			files = (
 				95538E7E27A1E98600378829 /* ContentView.swift in Sources */,
 				95538E7C27A1E98600378829 /* FlowApp.swift in Sources */,
+				95B5C22927AC7A84003FB436 /* R.generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -434,6 +470,7 @@
 				DEVELOPMENT_TEAM = ENA8ANA2C3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -463,6 +500,7 @@
 				DEVELOPMENT_TEAM = ENA8ANA2C3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -597,6 +635,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		95B5C22A27AC7ADD003FB436 /* XCRemoteSwiftPackageReference "R.swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mac-cain13/R.swift.Library";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		95B5C22B27AC7ADD003FB436 /* Rswift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 95B5C22A27AC7ADD003FB436 /* XCRemoteSwiftPackageReference "R.swift" */;
+			productName = Rswift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 95538E7027A1E98600378829 /* Project object */;
 }
