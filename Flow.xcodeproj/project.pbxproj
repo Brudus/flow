@@ -17,6 +17,7 @@
 		95538E9927A1E98700378829 /* FlowUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95538E9827A1E98700378829 /* FlowUITestsLaunchTests.swift */; };
 		95B5C22927AC7A84003FB436 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B5C22827AC7A84003FB436 /* R.generated.swift */; };
 		95B5C22C27AC7ADD003FB436 /* Rswift in Frameworks */ = {isa = PBXBuildFile; productRef = 95B5C22B27AC7ADD003FB436 /* Rswift */; };
+		95B5C22F27AC7D0B003FB436 /* Resources+SwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B5C22E27AC7D0B003FB436 /* Resources+SwiftUI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		95538E9627A1E98700378829 /* FlowUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowUITests.swift; sourceTree = "<group>"; };
 		95538E9827A1E98700378829 /* FlowUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		95B5C22827AC7A84003FB436 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
+		95B5C22E27AC7D0B003FB436 /* Resources+SwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Resources+SwiftUI.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 			children = (
 				95538E7B27A1E98600378829 /* FlowApp.swift */,
 				95538E7D27A1E98600378829 /* ContentView.swift */,
+				95B5C22D27AC7CEB003FB436 /* Extensions */,
 				9516998227A2CB1E0034DC9F /* Resources */,
 				95538E8127A1E98600378829 /* Preview Content */,
 			);
@@ -141,6 +144,14 @@
 				95538E9827A1E98700378829 /* FlowUITestsLaunchTests.swift */,
 			);
 			path = FlowUITests;
+			sourceTree = "<group>";
+		};
+		95B5C22D27AC7CEB003FB436 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				95B5C22E27AC7D0B003FB436 /* Resources+SwiftUI.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -307,6 +318,7 @@
 				95538E7E27A1E98600378829 /* ContentView.swift in Sources */,
 				95538E7C27A1E98600378829 /* FlowApp.swift in Sources */,
 				95B5C22927AC7A84003FB436 /* R.generated.swift in Sources */,
+				95B5C22F27AC7D0B003FB436 /* Resources+SwiftUI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

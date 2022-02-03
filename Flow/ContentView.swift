@@ -12,8 +12,8 @@ struct ContentView: View {
         ZStack {
             LinearGradient(
                 colors: [
-                    Color("CountdownBGStart"),
-                    Color("CountdownBGEnd")
+                    R.color.countdownBGStart.color,
+                    R.color.countdownBGEnd.color
                 ],
                 startPoint: .topTrailing,
                 endPoint: .bottomLeading
@@ -46,10 +46,10 @@ struct ContentView: View {
                 .overlay(
                     ZStack {
                         Circle()
-                            .stroke(Color("CountdownRingBG"), lineWidth: 6)
+                            .stroke(R.color.countdownRingBG.color, lineWidth: 6)
                         Circle()
                             .trim(from: 0.0, to: CGFloat(0.8))
-                            .stroke(Color("CountdownRingFG"), lineWidth: 6)
+                            .stroke(R.color.countdownRingFG.color, lineWidth: 6)
                         
                         
                     }
